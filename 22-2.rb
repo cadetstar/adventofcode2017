@@ -42,7 +42,8 @@ class Infector
   end
 
   def move!
-    @position = [@position[0] + @directions[0][0], @position[1] + @directions[0][1]]
+    @position[0] += @directions[0][0]
+    @position[1] += @directions[0][1]
   end
 
   def display!(iter = 0)
@@ -74,5 +75,5 @@ total = 0
   #i.display!(j + 1)
 end
 
-puts i.display!(10_000)
+#puts i.display!(10_000)
 puts "Total pulses causing infection: #{total}"
